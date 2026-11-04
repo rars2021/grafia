@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Grafia</title>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="#1e1f22" stroke="#3b3a36" stroke-width="2"/>
+  <path d="M12 44c6-4 9-14 15-14s6 10 12 10 8-12 13-16" fill="none" stroke="#24345e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 44c6-4 9-14 15-14s6 10 12 10 8-12 13-16" fill="none" stroke="#7d9be0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 52h44" stroke="#c4554b" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

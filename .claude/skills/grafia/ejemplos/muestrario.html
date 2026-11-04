@@ -1,0 +1,76 @@
+<title>Muestrario Grafia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="../kit/grafia.css">
+<body data-letra="kalam">
+<div class="hojas">
+
+<div class="hoja cuadricula">
+  <div class="cab">
+    <h1>Grafia · muestrario</h1>
+    <p class="sub">Todas las figuras del kit, por materia. Cada una se declara con data-fig y data-datos.</p>
+  </div>
+  <h2>Mecánica de rocas</h2>
+  <div class="fig" data-fig="mohr" data-w="620" data-h="280" data-datos='{"sx":300,"sy":900,"txy":140,"u":"kg/cm²"}'></div>
+  <p class="pie">mohr · {sx, sy, txy, u}</p>
+  <div class="dos">
+    <div class="fig" data-fig="red" data-w="400" data-h="400" data-datos='{"planos":["N50E/50SE","N50W/90NE","WE/00S","N70W/30SW"],"red":true}'></div>
+    <div class="fig" data-fig="semiesfera" data-w="400" data-h="380" data-datos='{"planos":["N50E/50SE","N50W/90NE","WE/00S","N70W/30SW"]}'></div>
+  </div>
+  <p class="pie">red · {planos, proy, red} &nbsp;·&nbsp; semiesfera · {planos, az, el}</p>
+  <span class="folio">1</span>
+</div>
+
+<div class="hoja cuadricula">
+  <h2>Mecánica de rocas (2)</h2>
+  <div class="dos">
+    <div class="fig" data-fig="bloque" data-w="400" data-h="300" data-datos='{"plano":"N40E/35SE"}'></div>
+    <div class="fig" data-fig="insitu" data-w="320" data-h="230" data-datos='{"z":300,"sv":7.35,"sh":2.45,"u":"MPa"}'></div>
+  </div>
+  <p class="pie">bloque · {plano} &nbsp;·&nbsp; insitu · {z, sv, sh, u}</p>
+  <div class="fig" data-fig="avance" data-w="620" data-h="190"></div>
+  <p class="pie">avance · túnel en planta, con y contra el buzamiento</p>
+  <div class="fig" data-fig="elemento" data-w="300" data-h="160" data-datos='{"th":32.5}'></div>
+  <p class="pie">elemento · {th}</p>
+  <span class="folio">2</span>
+</div>
+
+<div class="hoja rayado">
+  <h2>Geología</h2>
+  <div class="dos">
+    <div class="fig" data-fig="columna" data-w="380" data-h="400" data-datos='{"capas":[{"lit":"suelo","e":2,"nombre":"Suelo"},{"lit":"arenisca","e":12,"nombre":"Fm. Chimú"},{"lit":"lutita","e":8,"nombre":"Fm. Santa"},{"lit":"caliza","e":15,"nombre":"Fm. Jumasha"},{"lit":"carbon","e":2,"nombre":"Manto de carbón"},{"lit":"conglomerado","e":6,"nombre":"Conglomerado basal"},{"lit":"ignea","e":10,"nombre":"Intrusivo"}]}'></div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div class="fig" data-fig="corte" data-w="400" data-h="200" data-datos='{"tipo":"normal"}'></div>
+      <div class="fig" data-fig="corte" data-w="400" data-h="200" data-datos='{"tipo":"anticlinal","capas":["caliza","lutita","arenisca","lutita","caliza"]}'></div>
+    </div>
+  </div>
+  <p class="pie">columna · {capas: [{lit, e, nombre}]} — lit: arenisca, lutita, caliza, conglomerado, ignea, carbon, suelo &nbsp;·&nbsp; corte · {tipo: normal | inversa | anticlinal | sinclinal, capas}</p>
+  <span class="folio">3</span>
+</div>
+
+<div class="hoja milimetrado">
+  <h2>Minas</h2>
+  <div class="fig" data-fig="talud" data-w="620" data-h="250" data-datos='{"bancos":3,"hb":15,"berma":8,"cara":70}'></div>
+  <p class="pie">talud · {bancos, hb, berma, cara, u}</p>
+  <div class="dos">
+    <div class="fig" data-fig="labor" data-w="400" data-h="320" data-datos='{"ancho":4,"alto":4,"pernos":7,"L":1.8}'></div>
+    <div class="fig" data-fig="malla" data-w="400" data-h="320" data-datos='{"ancho":4,"alto":4}'></div>
+  </div>
+  <p class="pie">labor · {ancho, alto, pernos, L, shotcrete} &nbsp;·&nbsp; malla · {ancho, alto}</p>
+  <span class="folio">4</span>
+</div>
+
+<div class="hoja cuadricula">
+  <h2>Metalurgia</h2>
+  <div class="fig" data-fig="flujo" data-w="640" data-h="260" data-datos='{"nodos":[{"id":"ch","t":"Chancado","col":0},{"id":"mo","t":"Molienda","col":1},{"id":"hc","t":"Hidrociclón","col":2},{"id":"fl","t":"Flotación","col":3},{"id":"co","t":"Concentrado","col":3,"fila":1,"c":"verde"},{"id":"re","t":"Relave","col":2,"fila":1,"c":"gris"}],"flechas":[{"de":"ch","a":"mo"},{"de":"mo","a":"hc"},{"de":"hc","a":"fl","t":"O/F"},{"de":"fl","a":"co"},{"de":"fl","a":"re"}]}'></div>
+  <p class="pie">flujo · {nodos: [{id, t, col, fila, c}], flechas: [{de, a, t}]}</p>
+  <div class="dos">
+    <div class="fig" data-fig="curva" data-w="420" data-h="300" data-datos='{"series":[{"x":[38,75,150,300,600,1180,2360],"y":[12,24,41,60,78,92,100],"nombre":"P80 ≈ 600 µm"}],"x0":20,"x1":4000,"y0":0,"y1":100,"logx":true,"marcasX":[38,150,600,2360],"marcasY":[0,20,40,60,80,100],"xlab":"tamaño (µm)","ylab":"% pasante"}'></div>
+    <div class="fig" data-fig="barras" data-w="420" data-h="300" data-datos='{"cats":["Cu","Mo","Ag","Au"],"vals":[88,62,71,55],"y1":100,"marcasY":[0,25,50,75,100],"ylab":"recuperación (%)"}'></div>
+  </div>
+  <p class="pie">curva · {series, x0, x1, y0, y1, logx, marcasX, marcasY, xlab, ylab} &nbsp;·&nbsp; barras · {cats, vals, y1, marcasY, ylab}</p>
+  <span class="folio">5</span>
+</div>
+
+</div>
+<script src="../kit/grafia.js"></script>
+</body>

@@ -1,0 +1,88 @@
+/* grafia.css — hojas «hechas a mano»: papel, letra, tinta, títulos, cajas de respuesta, tablas y figuras.
+   Estética de los informes a mano de GeoStrike. Apariencia clara a propósito (papel), también en modo oscuro.
+   Elige papel con <div class="hoja cuadricula|rayado|milimetrado|libreta|blanco|lamina|kraft">
+   y letra con <body data-letra="kalam|caveat|patrick|architects|gochi|shadows">. */
+:root{
+  --mesa:#d9dce1; --azul:#1f3c8c; --lapiz:#3b3b42; --negro:#1c1c22; --rojo:#b5302a; --verde:#2e6b3c; --gris:#6b6b74;
+  --naranja:#c8641f; --ocre:#b4842a;
+  --tinta:var(--azul);
+  --mano:"Kalam","Segoe Print","Comic Sans MS",cursive;
+  color-scheme:light;
+}
+body[data-letra="caveat"]{--mano:"Caveat","Segoe Print",cursive}
+body[data-letra="patrick"]{--mano:"Patrick Hand","Segoe Print",cursive;--tinta:var(--lapiz)}
+body[data-letra="architects"]{--mano:"Architects Daughter","Segoe Print",cursive;--tinta:var(--negro)}
+body[data-letra="gochi"]{--mano:"Gochi Hand","Segoe Print",cursive}
+body[data-letra="shadows"]{--mano:"Shadows Into Light Two","Segoe Print",cursive}
+body[data-tinta="azul"]{--tinta:var(--azul)} body[data-tinta="lapiz"]{--tinta:var(--lapiz)}
+body[data-tinta="negro"]{--tinta:var(--negro)} body[data-tinta="verde"]{--tinta:#24553a}
+
+*{box-sizing:border-box}
+body{background:var(--mesa);color:var(--tinta);font-family:var(--mano);font-size:17px;line-height:1.45;margin:0;
+  padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px));padding-block:18px 48px}
+.hojas{display:flex;flex-direction:column;align-items:center;gap:16px}
+
+/* ── la hoja (A4) ─────────────────────────────────────────────────────────── */
+.hoja{width:100%;max-width:210mm;min-height:120mm;position:relative;background-color:#fff;color:var(--tinta);
+  padding:12mm clamp(14px,5vw,15mm) 14mm clamp(16px,6vw,20mm);box-shadow:0 1px 2px rgba(0,0,0,.18),0 6px 18px rgba(0,0,0,.10);
+  display:flex;flex-direction:column;gap:10px}
+.cuadricula{background-image:linear-gradient(rgba(60,110,190,.20) 1px,transparent 1px),linear-gradient(90deg,rgba(60,110,190,.20) 1px,transparent 1px);background-size:5mm 5mm;background-position:-1px -1px}
+.rayado{background-color:#fffefb;background-image:linear-gradient(90deg,transparent 17mm,rgba(214,60,60,.55) 17mm,rgba(214,60,60,.55) calc(17mm + 1px),transparent calc(17mm + 1px)),linear-gradient(transparent calc(8mm - 1px),rgba(70,120,200,.32) calc(8mm - 1px),rgba(70,120,200,.32) 8mm);background-size:100% 100%,100% 8mm;background-position:0 0,0 4mm}
+.milimetrado{background-color:#fffef7;background-image:linear-gradient(rgba(218,120,40,.42) 1px,transparent 1px),linear-gradient(90deg,rgba(218,120,40,.42) 1px,transparent 1px),linear-gradient(rgba(218,120,40,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(218,120,40,.22) 1px,transparent 1px),linear-gradient(rgba(218,120,40,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(218,120,40,.10) 1px,transparent 1px);background-size:50mm 50mm,50mm 50mm,10mm 10mm,10mm 10mm,2mm 2mm,2mm 2mm;background-position:10mm 12mm}
+.libreta{background-color:#f7efd8;background-image:linear-gradient(transparent calc(7mm - 1px),rgba(120,95,60,.28) calc(7mm - 1px),rgba(120,95,60,.28) 7mm);background-size:100% 7mm;background-position:0 6mm}
+.blanco{background-color:#fffffd}
+.kraft{background-color:#c9a27a;background-image:radial-gradient(rgba(90,60,30,.10) 1px,transparent 1.5px);background-size:7px 7px}
+.lamina{background-color:#fffffd}
+.lamina::after{content:"";position:absolute;inset:8mm 8mm 8mm 14mm;border:1.6px solid var(--tinta);pointer-events:none;border-radius:2px 3px 2px 4px;opacity:.85}
+.folio{position:absolute;bottom:5mm;right:9mm;font-size:14px;color:var(--gris)}
+
+/* ── texto ────────────────────────────────────────────────────────────────── */
+.hoja h1,.hoja h2,.hoja h3{font-weight:700;margin:0;line-height:1.2;text-wrap:balance}
+.hoja h1{font-size:30px;color:var(--rojo)}
+.hoja h2{font-size:23px;color:var(--rojo);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:rgba(181,48,42,.7);margin-top:6px}
+.hoja h3{font-size:18px}
+.pts{font-weight:400;font-size:16px;color:var(--gris);text-decoration:none;display:inline-block;margin-left:6px}
+.hoja p{margin:0}
+.hoja ul,.hoja ol{margin:0;padding-left:22px}
+.hoja li{margin:1px 0}
+.hoja b{font-weight:700}
+.cab{border-bottom:2px solid var(--rojo);padding-bottom:8px;display:flex;flex-direction:column;gap:2px}
+.cab .sub,.enun{color:var(--negro);font-weight:300;font-size:15.5px}
+.rojo{color:var(--rojo)} .verde{color:var(--verde)} .gris{color:var(--gris)}
+.sub{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px;text-decoration-color:var(--rojo)}
+.res{background:linear-gradient(100deg,rgba(255,226,40,0) 0%,rgba(255,226,40,.55) 3%,rgba(255,226,40,.45) 92%,rgba(255,226,40,0) 100%);border-radius:3px 8px 4px 9px;padding:0 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.w{display:inline-block}
+
+/* cálculos: una línea por paso, sin notas entre líneas */
+.calc{font-size:17px;line-height:1.75;overflow-x:auto;white-space:nowrap}
+/* respuesta final en recuadro rojo a mano */
+.caja{align-self:flex-start;border:2px solid var(--rojo);border-radius:5px 9px 6px 10px/8px 5px 9px 6px;padding:4px 14px;transform:rotate(-.4deg);font-weight:700;max-width:100%}
+.caja span{display:block}
+.postit{background:#fff27a;color:#2b2b2b;padding:8px 10px 10px;width:52mm;font-size:14.5px;line-height:1.3;box-shadow:0 2px 4px rgba(0,0,0,.15),0 8px 12px -8px rgba(0,0,0,.25);transform:rotate(2.2deg)}
+
+/* tablas trazadas con regla */
+.tabla{overflow-x:auto;max-width:100%}
+.hoja table{border-collapse:collapse;font-size:15.5px;line-height:1.3}
+.hoja th,.hoja td{border:1.3px solid color-mix(in srgb,var(--tinta) 75%,transparent);padding:3px 9px;text-align:left;vertical-align:top}
+.hoja th{color:var(--rojo);font-weight:700}
+.hoja td.c,.hoja th.c{text-align:center;white-space:nowrap}
+
+/* figuras */
+.fig{display:flex;flex-direction:column;align-items:center;min-width:0;width:100%}
+.fig canvas{display:block;max-width:100%}
+.pie{font-size:14px;color:var(--gris);text-align:center}
+.dos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:center}
+.tres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center}
+@media (max-width:620px){.dos,.tres{grid-template-columns:minmax(0,1fr)}.calc{font-size:15.5px}}
+
+/* ── impresión y PDF: una hoja = una página A4, con el papel ─────────────── */
+@media print{
+  @page{size:A4;margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:none;padding:0}
+  .hojas{display:block}
+  .hoja{width:210mm;max-width:none;height:297mm;min-height:0;overflow:hidden;box-shadow:none;margin:0;break-after:page;page-break-after:always;padding:12mm 15mm 14mm 20mm}
+  .hoja:last-child{break-after:auto;page-break-after:auto}
+}
+.hoja.desborda{outline:3px dashed var(--rojo);outline-offset:-3px}
+.cab .sub{text-decoration:none}
