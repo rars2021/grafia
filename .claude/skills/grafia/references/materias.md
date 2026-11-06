@@ -6,7 +6,6 @@ Qué papel, qué figuras y qué cuidar en cada curso. Si una figura no existe, s
 - Papel cuadriculado, Kalam azul.
 - Figuras: `mohr`, `elemento`, `red` + `semiesfera` (estereografía de familias), `bloque` (rumbo y buzamiento), `insitu` (σv, σH, K), `avance` (ajuste por orientación del RMR), `talud`, `labor`.
 - Cuidar: θ desde el eje X antihorario; DB = rumbo ± 90° hacia el buzamiento; polo = DB + 180° / 90° − β; unidades kg/cm² ↔ MPa (× 0.0981).
-- Caso real: `ejemplos/solucionario-cordova.html` y la skill `cordova-rojas` (`<REPOS>/personal\cordova-rojas`).
 
 ## Geología (general, estructural, estratigrafía, yacimientos)
 - Papel rayado o blanco; libreta (`patrick`) para campo.

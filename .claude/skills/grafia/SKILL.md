@@ -6,8 +6,7 @@ description: Hace hojas «escritas a mano» para estudiar o entregar —exámene
 # Grafia
 
 Hojas A4 que parecen escritas y dibujadas a mano. Sale del motor «a mano» de GeoStrike
-(`<REPOS>/geo\geostrike`: `stereonet.js` → `makePen`, `marco/` y `variantes.js`) convertido en un kit
-reutilizable para cualquier materia.
+(`stereonet.js` → `makePen`, `marco/` y `variantes.js`) convertido en un kit reutilizable para cualquier materia.
 
 ## Qué pidió André y por qué
 
@@ -26,7 +25,6 @@ reutilizable para cualquier materia.
 | `kit/grafia.js` | Lápiz a mano, geometría (planos, polos, proyecciones Schmidt y Wulff), ejes y 15 figuras; mide si cada hoja cabe en A4 |
 | `plantilla/hoja.html` | Esqueleto de una hoja con una pregunta |
 | `ejemplos/muestrario.html` | Las 15 figuras por materia, con su `data-datos` (sirve de prueba) |
-| `ejemplos/solucionario-cordova.html` | Caso real: solucionario de Mecánica de Rocas (7 hojas) |
 | `scripts/armar.py` | Junta fuente + kit en un solo HTML (para Artifact o para abrir sin servidor) |
 | `scripts/pdf.py` | PDF A4 paginado en Descargas; se niega si una hoja no cabe |
 | `references/estilo.md` | Reglas del «a mano»: tintas, letras, papeles, qué no hacer |
@@ -42,7 +40,7 @@ reutilizable para cualquier materia.
    - Figuras: `<div class="fig" data-fig="…" data-w="…" data-h="…" data-datos='{…}'></div>` y su `<p class="pie">`.
 3. **Verifica los números** antes de escribirlos (un script de Python o la calculadora): la hoja no explica, así que un error no se nota.
 4. **Arma**: `python -I scripts/armar.py <fuente.html> <salida.html>`.
-5. **Mira** el resultado una vez: capturas con `node <REPOS>/geo\geotechnic\.claude\skills\geotechnic\scripts\drive.mjs <salida.html> --actions …` o el PDF con `--vista`.
+5. **Mira** el resultado una vez: capturas con Chrome o Edge sin interfaz (por ejemplo `drive.mjs` de [Geotechnic](https://github.com/rars2021/geotechnic)) o el PDF con `--vista`.
 6. **Entrega**:
    - Página: publica `<salida.html>` con la herramienta Artifact.
    - PDF: `python -I scripts/pdf.py <salida.html>` → `Descargas\<título>.pdf`. Si avisa que una hoja no cabe, pártela.

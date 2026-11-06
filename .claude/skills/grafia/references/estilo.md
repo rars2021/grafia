@@ -1,7 +1,7 @@
 # Estilo «a mano»
 
-Aprendido de los informes con nota 15 que imita GeoStrike 4 (`<REPOS>/geo\geostrike\docs\PLAN - Informes a mano (GeoStrike 4).md`)
-y de lo que André corrigió en el solucionario de Córdova.
+Aprendido de informes a mano con nota 15 (el plan «Informes a mano» de GeoStrike 4)
+y de las correcciones de André sobre un solucionario real de Mecánica de Rocas.
 
 ## Trazo
 
