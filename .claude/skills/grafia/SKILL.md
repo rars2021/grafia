@@ -1,14 +1,14 @@
 ---
 name: grafia
-description: Hace hojas «escritas a mano» para estudiar o entregar —exámenes resueltos, solucionarios, apuntes, formularios, marcos teóricos, informes— en cuaderno cuadriculado, rayado, milimetrado o libreta, con letra manuscrita en tinta azul, títulos rojos subrayados, respuestas en recuadro y figuras dibujadas con lápiz de regla y compás (círculo de Mohr, red estereográfica y semiesfera, bloque rumbo-buzamiento, columna estratigráfica, corte con falla o pliegue, talud de bancos, labor con pernos, malla de perforación, diagrama de flujo de planta, curva granulométrica, barras). Sirve para cualquier curso: geología, minas, metalurgia, mecánica de rocas y otras materias. Úsala cuando André pida «hazlo a mano», «como examen resuelto», «estilo cuaderno», «estética de GeoStrike», «solucionario», «apuntes para estudiar», «sin estética web», o un PDF paginado A4 de una hoja así. Complemento de Geotechnic (3D casi real) y de sstutor-anatomia (isométricos de laboratorio).
+description: Hace hojas «escritas a mano» para estudiar o entregar —exámenes resueltos, solucionarios, apuntes, formularios, marcos teóricos, informes— en cuaderno cuadriculado, rayado, milimetrado o libreta, con letra manuscrita en tinta azul, títulos rojos subrayados, respuestas en recuadro y figuras dibujadas con lápiz de regla y compás (círculo de Mohr, red estereográfica y semiesfera, bloque rumbo-buzamiento, columna estratigráfica, corte con falla o pliegue, talud de bancos, labor con pernos, malla de perforación, diagrama de flujo de planta, curva granulométrica, barras). Sirve para cualquier curso: geología, minas, metalurgia, mecánica de rocas y otras materias. Úsala cuando pidan «hazlo a mano», «como examen resuelto», «estilo cuaderno», «solucionario», «apuntes para estudiar», «sin estética web», o un PDF paginado A4 de una hoja así.
 ---
 
 # Grafia
 
-Hojas A4 que parecen escritas y dibujadas a mano. Sale del motor «a mano» de GeoStrike
-(`stereonet.js` → `makePen`, `marco/` y `variantes.js`) convertido en un kit reutilizable para cualquier materia.
+Hojas A4 que parecen escritas y dibujadas a mano: un kit reutilizable para cualquier materia (lápiz de regla y
+compás, marcos y variantes de papel).
 
-## Qué pidió André y por qué
+## Qué busca y por qué
 
 - «La estética web me pierde»: nada de tarjetas, chips, botones ni paneles. Papel, tinta y lápiz.
 - «Que parezca un examen resuelto perfectamente»: enunciado corto, cálculo en líneas, resultado en recuadro.
@@ -40,7 +40,7 @@ Hojas A4 que parecen escritas y dibujadas a mano. Sale del motor «a mano» de G
    - Figuras: `<div class="fig" data-fig="…" data-w="…" data-h="…" data-datos='{…}'></div>` y su `<p class="pie">`.
 3. **Verifica los números** antes de escribirlos (un script de Python o la calculadora): la hoja no explica, así que un error no se nota.
 4. **Arma**: `python -I scripts/armar.py <fuente.html> <salida.html>`.
-5. **Mira** el resultado una vez: capturas con Chrome o Edge sin interfaz (por ejemplo `drive.mjs` de [Geotechnic](https://github.com/rars2021/geotechnic)) o el PDF con `--vista`.
+5. **Mira** el resultado una vez: capturas con Chrome o Edge sin interfaz (por ejemplo con Puppeteer o Playwright) o el PDF con `--vista`.
 6. **Entrega**:
    - Página: publica `<salida.html>` con la herramienta Artifact.
    - PDF: `python -I scripts/pdf.py <salida.html>` → `Descargas\<título>.pdf`. Si avisa que una hoja no cabe, pártela.

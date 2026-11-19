@@ -1,7 +1,7 @@
 /**
  * grafia.js — dibujo y figuras «hechos a mano» para hojas de estudio, exámenes resueltos e informes.
  *
- * El lápiz sale del motor a mano de GeoStrike (stereonet.js → makePen): rectas con regla que se pasan
+ * El lápiz: rectas con regla que se pasan
  * de los extremos, circunferencias con compás que no cierran exacto, grafito en dos pasadas con
  * presión variable y una semilla fija por figura (la irregularidad es estable entre recargas).
  *

@@ -1,5 +1,5 @@
 /* grafia.css — hojas «hechas a mano»: papel, letra, tinta, títulos, cajas de respuesta, tablas y figuras.
-   Estética de los informes a mano de GeoStrike. Apariencia clara a propósito (papel), también en modo oscuro.
+   Estética de informe hecho a mano. Apariencia clara a propósito (papel), también en modo oscuro.
    Elige papel con <div class="hoja cuadricula|rayado|milimetrado|libreta|blanco|lamina|kraft">
    y letra con <body data-letra="kalam|caveat|patrick|architects|gochi|shadows">. */
 :root{

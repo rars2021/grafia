@@ -1,7 +1,7 @@
 # Estilo «a mano»
 
-Aprendido de informes a mano con nota 15 (el plan «Informes a mano» de GeoStrike 4)
-y de las correcciones de André sobre un solucionario real de Mecánica de Rocas.
+Aprendido de informes a mano bien calificados
+y de las correcciones a un solucionario real de Mecánica de Rocas.
 
 ## Trazo
 
@@ -44,7 +44,7 @@ y de las correcciones de André sobre un solucionario real de Mecánica de Rocas
 
 ## Formatos
 
-### Examen resuelto (el que pidió André)
+### Examen resuelto
 - Cabecera: curso y evaluación en rojo, línea de datos fina, raya roja.
 - Por pregunta: `h2` numerado con `(4 ptos)`, `.enun` con los datos, `.calc` con una línea por paso, `.caja` con el resultado final y sus unidades, la figura si la pregunta la pide.
 - Nada más: sin notas al margen, sin «ojo», sin explicar por qué, sin deducciones largas.
